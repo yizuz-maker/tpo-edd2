@@ -210,7 +210,7 @@ public class Grafo<T> implements IGrafo<T> {
                 // Calcular nueva distancia
                 int nuevaDistancia = distancias.get(actual) + pesoArista;
 
-                // Si encontramos un camino más corto hacia 'vecino'
+                // Si encontramos un camino mas corto hacia 'vecino'
                 if (nuevaDistancia < distancias.get(vecino)) {
                     distancias.put(vecino, nuevaDistancia);
                     padres.put(vecino, actual);
@@ -271,7 +271,7 @@ public class Grafo<T> implements IGrafo<T> {
         while (!openSet.isEmpty()) {
             INodo<T> actual = openSet.poll().nodo;
 
-            // Si es el destino, terminamos
+            // Si es el destino, termina
             if (actual.equals(nodoFin)) {
                 return reconstruirCamino(padres, nodoFin);
             }
