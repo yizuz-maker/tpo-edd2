@@ -2,6 +2,7 @@ package interfaces;
 
 import java.util.*;
 
+import java.util.function.Function;
 public interface IGrafo<T> {
 
     boolean esDirigido();
@@ -20,4 +21,8 @@ public interface IGrafo<T> {
     List<T> BFS(T inicioValor);
 
     List<T> DFS(T inicioValor);
+
+    List<T> Dijkstra(T inicioValor, T finValor);
+
+    List<T> AStar(T inicioValor, T finValor, Function<T, Integer> heuristica);
 }
